@@ -14,7 +14,7 @@ def send_message(msg):
             await webhook.send(msg1, username=username,
                                avatar_url=avatar_url)
 
-    message(msg)
+    asyncio.run(message(msg))
 
 
 def send_kutaisi(dates):
