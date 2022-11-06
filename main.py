@@ -18,22 +18,17 @@ def detect_change(file, dates):
 
 
 def run():
-    while True:
-        resK = requests.get(kutaisi)
-        resS = requests.get(sachkhere)
+    resK = requests.get(kutaisi)
+    resS = requests.get(sachkhere)
 
-        datesK = [i["bookingDate"] for i in resK.json()]
-        datesS = [i["bookingDate"] for i in resS.json()]
-        if detect_change('kutaisi.txt', datesK):
-            send_kutaisi(datesK)
-            print("message sent")
+    datesK = [i["bookingDate"] for i in resK.json()]
+    datesS = [i["bookingDate"] for i in resS.json()]
+    if detect_change('kutaisi.txt', datesK):
+        send_kutaisi(datesK)
+        print("message sent")
 
-        elif detect_change('sachkhere.txt', datesS):
-            send_sachkhere(datesS)
-            print("message sent")
-
-        time.sleep(120)
+    elif detect_change('sachkhere.txt', datesS):
+        send_sachkhere(datesS)
+        print("message sent")
 
 
-if __name__ == '__main__':
-    run()
