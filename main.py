@@ -30,5 +30,8 @@ def run():
     elif detect_change('sachkhere.txt', datesS):
         send_sachkhere(datesS)
         print("message sent")
+    send_kutaisi(datesK)
+    print("message sent")
+
 
 

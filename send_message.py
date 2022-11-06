@@ -6,8 +6,6 @@ WEBHOOK = 'https://discord.com/api/webhooks/1038867606196732026/M2na5EuBhBUfWxJ5
 username = 'Bizina ivanishvili'
 avatar_url = 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Bidzina_Ivanishvili_2013-07-19.jpg'
 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
 
 def send_message(msg):
     async def message(msg1):
@@ -16,7 +14,7 @@ def send_message(msg):
             await webhook.send(msg1, username=username,
                                avatar_url=avatar_url)
 
-    asyncio.run(message(msg))
+    message(msg)
 
 
 def send_kutaisi(dates):
