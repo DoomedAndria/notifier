@@ -1,16 +1,22 @@
-from twilio.rest import Client
+from discord import Webhook
+import aiohttp
+import asyncio
+
+WEBHOOK = 'https://discord.com/api/webhooks/1038867606196732026/M2na5EuBhBUfWxJ5Fer4rtG_-5uNe2mcxQc-WlTRfTr5eHtAywOst_KPulKYn_Pny1l3'
+username = 'Bizina ivanishvili'
+avatar_url = 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Bidzina_Ivanishvili_2013-07-19.jpg'
+
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
-def send_message(message):
-    account_sid = 'AC8310fb9cff2576cc49c5555f14ba362f'
-    auth_token = '81542c8a1fddb58a022309707db02cc4'
-    client = Client(account_sid, auth_token)
+def send_message(msg):
+    async def message(msg1):
+        async with aiohttp.ClientSession() as session:
+            webhook = Webhook.from_url(WEBHOOK, session=session)
+            await webhook.send(msg1, username=username,
+                               avatar_url=avatar_url)
 
-    client.messages.create(
-        from_='whatsapp:+14155238886',
-        body=message,
-        to='whatsapp:+995591750895'
-    )
+    asyncio.run(message(msg))
 
 
 def send_kutaisi(dates):
