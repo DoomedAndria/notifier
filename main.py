@@ -24,7 +24,7 @@ def run():
     datesK = [i["bookingDate"] for i in resK.json()]
     datesS = [i["bookingDate"] for i in resS.json()]
     if detect_change('kutaisi.txt', datesK):
-        send_kutaisi(datesK)
+#         send_kutaisi(datesK)
         print("message sent")
 
     elif detect_change('sachkhere.txt', datesS):
