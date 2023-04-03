@@ -2,7 +2,7 @@ from discord import Webhook
 import aiohttp
 import asyncio
 
-WEBHOOK = 'https://discord.com/api/webhooks/1038867606196732026/M2na5EuBhBUfWxJ5Fer4rtG_-5uNe2mcxQc-WlTRfTr5eHtAywOst_KPulKYn_Pny1l3'
+WEBHOOK = 'https://discordapp.com/api/webhooks/1092082173735079979/AdumdUec8xXbcw_axC7gypZugC0uRLabghEGn4S-63kCSbU3ezORNC1ZZH-0B2UVjXmW'
 username = 'Bizina ivanishvili'
 avatar_url = 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Bidzina_Ivanishvili_2013-07-19.jpg'
 
