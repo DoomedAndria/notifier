@@ -17,15 +17,6 @@ def send_message(msg):
     asyncio.run(message(msg))
 
 
-def send_kutaisi(dates):
-    message_kutaisi = 'ქუთაისი:\n\n'
-    if len(dates) == 0:
-        message_kutaisi += "საგამოცდო თარიღი ვერ მოიძებნა"
-    else:
-        for i in dates:
-            message_kutaisi += i + "\n"
-    send_message(message_kutaisi)
-
 
 def send_sachkhere(dates):
     message_sachkhere = 'საჩხერე:\n\n'
