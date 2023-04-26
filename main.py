@@ -4,8 +4,8 @@ from send_message import send_kutaisi, send_sachkhere
 
 kutaisi = 'https://api-my.sa.gov.ge/api/v1/DrivingLicensePracticalExams2/DrivingLicenseExamsDates2?CategoryCode=4' \
           '&CenterId=2 '
-sachkhere = 'https://api-my.sa.gov.ge/api/v1/DrivingLicensePracticalExams2/DrivingLicenseExamsDates2?CategoryCode=4' \
-            '&CenterId=10 '
+
+sachkhere = 'https://api-my.sa.gov.ge/api/v1/DrivingLicensePracticalExams2/DrivingLicenseExamsDates2?CategoryCode=4&CenterId=10'
 
 
 def detect_change(file, dates):
